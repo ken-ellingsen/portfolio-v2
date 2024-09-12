@@ -1,10 +1,11 @@
 import '../css/Header.css';
+import headerImage from '../img/header-image.jpg';
 
 const Header = () => {
     return (
         <header>
             <div class="header-info">
-                <img src="img/header-image.jpg" alt="Ken Ellingsen" />
+                <img src={headerImage} alt="Ken Ellingsen" />
                 <div class="name-title">
                     <h1>Ken Ellingsen</h1>
                     <h3>Front End Developer</h3>
