@@ -1,7 +1,7 @@
+/********** Header **********/
 header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     background-color: #152A3E;
     color: whitesmoke;
 }
@@ -10,33 +10,40 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
 }
 
 header img {
-    width: 40%;
+    width: 50%;
     height: auto;
+    border: 2px solid #222;
     border-radius: 50%;
-    margin: 20px 0;
+    margin: 40px 0 20px 0;
 }
 
 .name-title {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 35px;
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .name-title h1,
 .name-title h3 {
     text-align: center;
-    width: 75%;
+    margin: 0;
+    padding: 0;
 }
 
+/********** Navbar **********/
 .navbar {
     display: flex;
     width: 100%;
     background-color: #222;
+}
+
+.navbar a {
+    text-decoration: none;
 }
 
 .navbar .nav-item {
@@ -88,60 +95,77 @@ header img {
     display: none;
 }
 
+/******************** Oddly Large Phone Styling ********************/
+@media all and (min-width: 450px) {
+    header img {
+        width: 30%;
+    }
+}
+
 /******************** Tablet Styling ********************/
-@media all and (min-width: 768px) {
-    header {
-            justify-content: flex-start;
-        }
-    
-        .header-info {
-            justify-content: flex-start;
-            padding: 35px 0;
-        }
-    
-        header img {
-            width: 15%;
-            margin: 20px 15px;
-        }
-    
-        .name-title {
-            width: 50%;
-            justify-content: flex-start;
-            align-content: center;
-            margin: 0;
-        }
-    
-        .name-title h1,
-        .name-title h3 {
-            text-align: start;
-        }
-    
-        .navbar .nav-item {
-            font-size: 0.9em;
-        }
-    
-        .dropdown-content {
-            margin-top: 43px;
-        }
+@media all and (min-width: 768px) {   
+    .header-info {
+        justify-content: flex-start;
+        padding: 35px 0;
+    }
+
+    header img {
+        width: 15%;
+        margin: 0 20px 0 35px;
+    }
+
+    .name-title {
+        justify-content: center;
+        margin: 0;
+        width: 50%;
+    }
+
+    .name-title h1,
+    .name-title h3 {
+        text-align: start;
+    }
+
+    .name-title h1 {
+        font-size: 2.5em;
+    }
+
+    .name-title h3 {
+        font-size: 1.5em;
+    }
+
+    .navbar .nav-item {
+        font-size: 0.9em;
+    }
+
+    .dropdown-content {
+        margin-top: 43px;
+    }
 }
 
 /******************** Desktop Styling ********************/
 @media all and (min-width: 1200px) {
+    .header-info {
+        margin: 20px 0;
+    }
+
     header img {
-            width: 9%;
-            margin: 30px 20px;
-        }
+        width: 17.5%;
+        margin: 0 30px 0 45px;
+    }
+
+    .name-title h1 {
+        font-size: 3em;
+    }
+
+    .name-title h3 {
+        font-size: 2em;
+    }
     
-        .name-title h1,
-        .name-title h3 {
-            text-align: left;
-        }
-    
-        .navbar .nav-item {
-            font-size: 1em;
-        }
-    
-        .dropdown-content {
-            margin-top: 47px;
-        }
+    .navbar .nav-item {
+        font-size: 1em;
+    }
+
+    .dropdown-content {
+        margin-top: 47px;
+    }
 }
